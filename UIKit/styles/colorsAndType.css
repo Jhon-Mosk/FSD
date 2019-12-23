@@ -1,12 +1,39 @@
 .container-fluid {
   max-width: 1440px;
+  height: 900px;
 }
 
-.t1 {
-  background: red;
+.b-colorItem:nth-child(1) .b-colorItem__block {
+  background: #1F2041;
 }
 
-.t2 {
-  background: green;
+.b-colorItem:nth-child(2) .b-colorItem__block {
+  background: rgba(31, 32, 65, 0.75);
+}
+
+.b-colorItem:nth-child(3) .b-colorItem__block {
+  background: rgba(31, 32, 65, 0.5);
+}
+
+.b-colorItem:nth-child(4) .b-colorItem__block {
+  background: rgba(31, 32, 65, 0.25);
+}
+
+.b-colorItem:nth-child(5) .b-colorItem__block {
+  background: rgba(31, 32, 65, 0.05);
+}
+
+.b-colorItem:nth-child(6) .b-colorItem__block {
+  background: #BC9CFF;
+}
+
+.b-colorItem:nth-child(7) .b-colorItem__block {
+  background: #6FCF97;
+}
+
+.b-colorItem__block {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
 }
 /*# sourceMappingURL=colorsAndType.css.map */

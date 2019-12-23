@@ -1,11 +1,41 @@
 .container-fluid {
-    max-width: 1440px;    
+    max-width: 1440px;
+    height: 900px;    
 }
 
-.t1 {
-    background: red;
-}
+.b-colorItem {
 
-.t2 {
-    background: green;
+    &:nth-child(1) &__block{
+            background: #1F2041;
+    }
+
+    &:nth-child(2) &__block {        
+            background: rgba(31, 32, 65, 0.75);
+    }
+
+    &:nth-child(3) &__block {
+        background: rgba(31, 32, 65, 0.5);
+    }
+
+    &:nth-child(4) &__block {
+        background: rgba(31, 32, 65, 0.25);
+    }
+
+    &:nth-child(5) &__block {
+        background: rgba(31, 32, 65, 0.05);
+    }
+
+    &:nth-child(6) &__block {
+        background: #BC9CFF;
+    }
+
+    &:nth-child(7) &__block {
+        background: #6FCF97;
+    }
+
+    &__block {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+    }
 }
