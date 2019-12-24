@@ -1,41 +1,127 @@
+@import "variables";
+
 .container-fluid {
     max-width: 1440px;
-    height: 900px;    
+    height: 900px;
+}
+
+.b-logo {
+    background: url(../../images/Group.svg) no-repeat;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 48px;
+    height: 48px;
+}
+
+.b-colorsAndTypeWrap {
+    margin-top: 145px;
+    margin-left: 150px;
 }
 
 .b-colorItem {
+    margin-bottom: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
 
     &:nth-child(1) &__block{
-            background: #1F2041;
+            background: $darkShade100;
     }
 
     &:nth-child(2) &__block {        
-            background: rgba(31, 32, 65, 0.75);
+            background: $darkShade75;
     }
 
     &:nth-child(3) &__block {
-        background: rgba(31, 32, 65, 0.5);
+        background: $darkShade50;
     }
 
     &:nth-child(4) &__block {
-        background: rgba(31, 32, 65, 0.25);
+        background: $darkShade25;
     }
 
     &:nth-child(5) &__block {
-        background: rgba(31, 32, 65, 0.05);
+        background: $darkShade5;
     }
 
     &:nth-child(6) &__block {
-        background: #BC9CFF;
+        background: $buttonColor;
     }
 
     &:nth-child(7) &__block {
-        background: #6FCF97;
+        background: $activeColor;
     }
 
     &__block {
         width: 70px;
         height: 70px;
-        border-radius: 6px;
+        border-radius: 6px;   
+    }
+
+    &__description {
+        padding-left: 40px;
+        font-size: 19px;
+        line-height: 29px;        
+        color: $darkShade100;   
+    }
+
+    &__title {
+        font-family: $titleBoldFont;       
+    }
+
+    &__hex {
+        font-family: $titleFont;     
+    }
+}
+
+.b-typeItem {
+    margin-bottom: 50px;
+    display: flex;
+
+    &:nth-child(1) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    &:nth-child(2) {
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    &:nth-child(3) {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &:nth-child(4) {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__name {
+        font-family: $mainFont;
+        color: $darkShade25;
+        width: 37px;
+        text-align: right;
+    }
+
+    &:nth-child(1) &__description {
+        font-family: $titleBoldFont;        
+    }
+
+    &:nth-child(2) &__description {
+        font-family: $titleBoldFont;        
+    }
+
+    &:nth-child(3) &__description {
+        font-family: $mainBoldFont;        
+    }
+
+    &:nth-child(4) &__description {
+        font-family: $mainFont;
+    }
+
+    &__description {
+        margin-left: 30px;
     }
 }
