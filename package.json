@@ -1,0 +1,36 @@
+{
+  "name": "fsd",
+  "version": "1.0.0",
+  "description": "Kit for HTML+SASS+PUG built by Jhon Mosk",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhon-Mosk/FSD.git"
+  },
+  "keywords": [
+    "Jhon",
+    "Mosk",
+    "HTML",
+    "SASS",
+    "PUG",
+    "Starter Kit",
+    "Webpack",
+    "BEM"
+  ],
+  "author": "Jhon Mosk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jhon-Mosk/FSD/issues"
+  },
+  "homepage": "https://github.com/Jhon-Mosk/FSD#readme",
+  "devDependencies": {
+    "path": "^0.12.7",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
