@@ -4,8 +4,8 @@
   "description": "Kit for HTML+SASS+PUG built by Jhon Mosk",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "dev": "webpack-dev-server --open --mode development",  // запуск разработки
+    "build": "webpack --mode production"  // запуск сборки
   },
   "repository": {
     "type": "git",
