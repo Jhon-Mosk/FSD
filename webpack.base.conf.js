@@ -8,13 +8,17 @@ const PATHS = {
 }
 
 module.exports = {
+
+    externals: {
+        path: PATHS     //чтобы получить доступ к PATHS из других конфигов
+    },
     entry: {
-        app: './src/index.js'       //путь к точке входа, может быть несколько
+        app: PATHS.src       //путь к точке входа, может быть несколько
     },
     output: {
-        filename: '[name].js',       //точка выхода, имя берётся из ярлыка точки входа
-        path: path.resolve(__dirname, './dist'),     //путь к выходной папке
-        publicPath: '/dist'        //папка нужно для работы devServer
+        filename: `${PATHS.assets}js/[name].js`,       //точка выхода, имя берётся из ярлыка точки входа
+        path: PATHS.dist,     //путь к выходной папке
+        publicPath: '/'        //папка нужно для работы devServer
     },
     module: {
         rules: [{
@@ -41,7 +45,7 @@ module.exports = {
     },    
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css"
+            filename: `${PATHS.assets}css/[name].css`
         })
     ]
 }
