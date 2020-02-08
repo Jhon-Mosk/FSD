@@ -1,6 +1,12 @@
 const path = require('path')        //обращаемся к package.json
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const PATHS = {
+    src: path.join(__dirname, './src'),
+    dist: path.join(__dirname, './dist'),
+    assets: 'assets/'
+}
+
 module.exports = {
     entry: {
         app: './src/index.js'       //путь к точке входа, может быть несколько
@@ -32,10 +38,7 @@ module.exports = {
                 }
             ]     //через что обрабатываем файлы
         }]
-    },
-    devServer: {
-        overlay: true       //параметр: показ ошибок на экране браузера
-    },
+    },    
     plugins: [
         new MiniCssExtractPlugin({
             filename: "[name].css"
