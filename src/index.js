@@ -1,8 +1,7 @@
 //точка входа, здесь все библиотеки и скрипты
 
 import './js/common'
-import './scss/UIKit/styles/colorsAndType.css'
-import './scss/UIKit/styles/colorsAndType.scss'
+import './scss/UIKit/colorsAndType.scss'
 
 
 /*три способа как подключать файлы

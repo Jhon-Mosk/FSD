@@ -18,8 +18,15 @@ module.exports = {
         }, {
             test: /\.css$/,              //какие файлы обрабатываем
             use: [
+                'style-loader',
                 MiniCssExtractPlugin.loader,
-                "css-loader"
+                {
+                    loader: 'css-loader',
+                    options: { sourceMap: true }        //конфигурация css-loader
+                }, {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
+                },
             ]     //через что обрабатываем файлы
         }, {
             test: /\.scss$/,              //какие файлы обрабатываем
@@ -29,6 +36,9 @@ module.exports = {
                 {
                     loader: 'css-loader',
                     options: { sourceMap: true }        //конфигурация css-loader
+                }, {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
                 }, {
                     loader: 'sass-loader',
                     options: { sourceMap: true }
