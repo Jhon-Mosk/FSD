@@ -21,6 +21,10 @@
     "Webpack",
     "BEM"
   ],
+  "browsersList": [
+    "> 1%",
+    "last 3 version"
+  ],
   "author": "Jhon Mosk",
   "license": "MIT",
   "bugs": {
@@ -30,11 +34,15 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "webpack": "^4.41.5",
