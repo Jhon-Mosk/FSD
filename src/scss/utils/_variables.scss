@@ -1,30 +1,4 @@
-// @font-face {
-//     font-family: 'Conv_Quicksand-Bold';
-// 	src: local('☺'), url('../../fonts/Quicksand/Bold/Quicksand-Bold.ttf') format('truetype'), url('../../fonts/Quicksand/Bold/Quicksand-Bold.woff') format('woff'), url('../../fonts/Quicksand/Bold/Quicksand-Bold.svg') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Conv_Quicksand-Medium';
-// 	src: local('☺'), url('../../fonts/Quicksand/Medium/Quicksand-Medium.ttf') format('truetype'), url('../../fonts/Quicksand/Medium/Quicksand-Medium.woff') format('woff'), url('../../fonts/Quicksand/Medium/Quicksand-Medium.svg') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Conv_Montserrat-Bold';
-// 	src: local('☺'), url('../../fonts/Montserrat/Bold/Montserrat-Bold.ttf') format('truetype'), url('../../fonts/Montserrat/Bold/Montserrat-Bold.woff') format('woff'), url('../../fonts/Montserrat/Bold/Montserrat-Bold.svg') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'Conv_Montserrat-Regular';
-// 	src: local('☺'), url('../../fonts/Montserrat/Regular/Montserrat-Regular.ttf') format('truetype'), url('../../fonts/Montserrat/Regular/Montserrat-Regular.woff') format('woff'), url('../../fonts/Montserrat/Regular/Montserrat-Regular.svg') format('svg');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
+@import "fonts.scss";
 
 $titleBoldFont: 'Conv_Quicksand-Bold', sans-serif;
 $titleFont: 'Conv_Quicksand-Medium', sans-serif;

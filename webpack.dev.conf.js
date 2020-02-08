@@ -4,9 +4,9 @@ const baseWebpackConfig = require('./webpack.base.conf')
 
 const devWebpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
-    contentBase: baseWebpackConfig.externals.path.dist,//место где будет открываться вебпак
     devtool: 'cheap-module-eval-source-map',
     devServer: {
+        contentBase: baseWebpackConfig.externals.path.dist,//место где будет открываться вебпак
         port: 8081,
         overlay: {
             warnings: false,
