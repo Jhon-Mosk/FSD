@@ -7,7 +7,7 @@ module.exports = {
     output: {
         filename: '[name].js',       //точка выхода, имя берётся из ярлыка точки входа
         path: path.resolve(__dirname, './dist'),     //путь к выходной папке
-        publicPath: './dist'        //папка нужно для работы devServer
+        publicPath: '/dist'        //папка нужно для работы devServer
     },
     devServer: {
         overlay: true       //параметр: показ ошибок на экране браузера
