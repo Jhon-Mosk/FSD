@@ -20,7 +20,19 @@ module.exports = {
     output: {
         filename: `${PATHS.assets}js/[name].js`,       //точка выхода, имя берётся из ярлыка точки входа
         path: PATHS.dist,     //путь к выходной папке
-        publicPath: ''        //папка нужно для работы devServer
+        publicPath: '/'        //папка нужно для работы devServer
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    name: 'vendors',            //для оптимизации загрузки
+                    test: /node_modules/,       //всё из node_modules попадает в vendors.js
+                    chunks: 'all',
+                    enforce: true
+                }
+            }
+        }
     },
     module: {
         rules: [{
