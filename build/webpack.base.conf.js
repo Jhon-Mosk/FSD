@@ -18,7 +18,7 @@ module.exports = {
         app: PATHS.src       //путь к точке входа, может быть несколько
     },
     output: {
-        filename: `${PATHS.assets}js/[name].js`,       //точка выхода, имя берётся из ярлыка точки входа
+        filename: `${PATHS.assets}js/[name].[hash].js`,       //точка выхода, имя берётся из ярлыка точки входа
         path: PATHS.dist,     //путь к выходной папке
         publicPath: '/'        //папка нужно для работы devServer
     },
@@ -65,7 +65,7 @@ module.exports = {
     },    
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].css`
+            filename: `${PATHS.assets}css/[name].[hash].css`
         }),
         new HtmlWebpackPlugin({
             hash: false,                         //выключает хэши
