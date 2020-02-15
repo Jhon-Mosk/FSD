@@ -70,7 +70,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: false,                         //выключает хэши
             template: `${PATHS.src}/index.html`,
-            filename: './index.html'
+            filename: './index.html',
+            inject: false                        //выключает автопрописывание стилей и скриптов вебпаком   
         }),
         new CopyWebpackPlugin([                 //копирует файлы из в
             { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },

@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="/dist/assets/css/app.css"> -->
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">          <!-- вытягивает все css в [] можно указать номер элемента массива, нужен если в base.conf inject: false -->
+    <% } %>
     <title>Colors & Type</title>
 </head>
 <body>
@@ -87,7 +90,9 @@
         </div>
 
     </div>
-
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>                       <!-- вытягивает все js -->
+    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %>
     <!-- <script src="/dist/assets/js/app.js"></script> -->
 </body>
 </html>
