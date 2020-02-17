@@ -61,14 +61,19 @@ module.exports = {
                     options: { sourceMap: true }        //конфигурация css-loader
                 }, {
                     loader: 'postcss-loader',
-                    options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
+                    options: { sourceMap: true, config: { path: `./postcss.config.js` } }
                 }, {
                     loader: 'sass-loader',
                     options: { sourceMap: true }
                 }
             ]     //через что обрабатываем файлы
         }]
-    },    
+    },
+    resolve: {
+        alias: {
+            '~': 'src'
+        }
+    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[hash].css`
@@ -80,9 +85,9 @@ module.exports = {
             inject: false                        //выключает автопрописывание стилей и скриптов вебпаком   
         }),
         new CopyWebpackPlugin([                 //копирует файлы из в
-            { from: `${PATHS.src}/img`, to: `${PATHS.assets}/img` },
+            { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}/img` },
             { from: `${PATHS.src}/static`, to: '' },
-            { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}/fonts` }
+            { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}/fonts` }
         ])
     ]
 }
