@@ -46,6 +46,12 @@ module.exports = {
                 name: '[name].[ext]'
             }
         }, {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,              //какие файлы обрабатываем
+            loader: 'file-loader',     //через что обрабатываем файлы
+            options: {
+                name: '[name].[ext]'
+            }
+        }, {
             test: /\.scss$/,              //какие файлы обрабатываем
             use: [
                 'style-loader',
