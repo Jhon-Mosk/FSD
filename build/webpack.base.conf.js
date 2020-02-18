@@ -9,6 +9,9 @@ const PATHS = {
     assets: 'assets/'
 }
 
+// const PAGES_DIR = `${PATHS.src}/pug/pages/`              //откуда берутся страницы в паге
+// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+
 module.exports = {
 
     externals: {
@@ -45,6 +48,9 @@ module.exports = {
             options: {
                 name: '[name].[ext]'
             }
+        }, {
+            test: /\.pug$/,              //какие файлы обрабатываем
+            loader: 'pug-loader'    //через что обрабатываем файлы            
         }, {
             test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,              //какие файлы обрабатываем
             loader: 'file-loader',     //через что обрабатываем файлы
@@ -88,6 +94,11 @@ module.exports = {
             { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}/img` },
             { from: `${PATHS.src}/static`, to: '' },
             { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}/fonts` }
-        ])
+        ]),
+
+        // ...PAGES.map(page => new HtmlWebpackPlugin({
+        //     template: `${PAGES_DIR}/${page}`,           //на входе паг
+        //     filename: `./${page.replace(/\.pug/,'.html')}`              //на выходе хтмл
+        // }))
     ]
 }
