@@ -1,8 +1,19 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body
-        h1 Example page
+extends ../layout/main
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+    - var pageClass = 'index-page';
+
+block content
+    section
+        .container
+            +item('item-title', 'item-descr')
+    section
+        .container
+            h1 Example page
+            p Hello world
+    section
+        .container
+            h1 Example page
+            p Hello world

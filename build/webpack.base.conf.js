@@ -1,4 +1,5 @@
 const path = require('path')        //обращаемся к package.json
+const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -9,8 +10,8 @@ const PATHS = {
     assets: 'assets/'
 }
 
-// const PAGES_DIR = `${PATHS.src}/pug/pages/`              //откуда берутся страницы в паге
-// const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_DIR = `${PATHS.src}/pug/pages/`              //откуда берутся страницы в паге
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
 
@@ -39,9 +40,8 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js$/,              //какие файлы обрабатываем
-            loader: 'babel-loader',     //через что обрабатываем файлы
-            exclude: '/node_modules/'   //исключаем из обработки    
+            test: /\.pug$/,              //какие файлы обрабатываем
+            loader: 'pug-loader'    //через что обрабатываем файлы            
         }, {
             test: /\.(png|jpg|gif|svg)$/,              //какие файлы обрабатываем
             loader: 'file-loader',     //через что обрабатываем файлы
@@ -49,8 +49,9 @@ module.exports = {
                 name: '[name].[ext]'
             }
         }, {
-            test: /\.pug$/,              //какие файлы обрабатываем
-            loader: 'pug-loader'    //через что обрабатываем файлы            
+            test: /\.js$/,              //какие файлы обрабатываем
+            loader: 'babel-loader',     //через что обрабатываем файлы
+            exclude: '/node_modules/'   //исключаем из обработки         
         }, {
             test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,              //какие файлы обрабатываем
             loader: 'file-loader',     //через что обрабатываем файлы
@@ -84,21 +85,21 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[hash].css`
         }),
-        new HtmlWebpackPlugin({
-            hash: false,                         //выключает хэши
-            template: `${PATHS.src}/index.html`,
-            filename: './index.html',
-            inject: false                        //выключает автопрописывание стилей и скриптов вебпаком   
-        }),
+        // new HtmlWebpackPlugin({
+        //     hash: false,                         //выключает хэши
+        //     template: `${PATHS.src}/index.html`,
+        //     filename: './index.html',
+        //     inject: false                        //выключает автопрописывание стилей и скриптов вебпаком   
+        // }),
         new CopyWebpackPlugin([                 //копирует файлы из в
             { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}/img` },
             { from: `${PATHS.src}/static`, to: '' },
             { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}/fonts` }
         ]),
 
-        // ...PAGES.map(page => new HtmlWebpackPlugin({
-        //     template: `${PAGES_DIR}/${page}`,           //на входе паг
-        //     filename: `./${page.replace(/\.pug/,'.html')}`              //на выходе хтмл
-        // }))
+        ...PAGES.map(page => new HtmlWebpackPlugin({
+            template: `${PAGES_DIR}/${page}`,           //на входе паг
+            filename: `./${page.replace(/\.pug/,'.html')}`              //на выходе хтмл
+        }))
     ]
 }
