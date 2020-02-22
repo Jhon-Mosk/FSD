@@ -1,36 +1,18 @@
-// Font
-$mainFont: 'Montserrat', Helvetica, Arial, sans-serif;
-$secondFont: 'Quicksand', Helvetica, Arial, sans-serif;
+@import "fonts.scss";
 
-//Size
-$mainFontColor: #101010;
-$mainFontSize: 18px;
-$mainFontWeight: 400;
-$mainLineHeight: 1.4;
+$titleBoldFont: 'Conv_Quicksand-Bold', sans-serif;
+$titleFont: 'Conv_Quicksand-Medium', sans-serif;
+$mainBoldFont: 'Conv_Montserrat-Bold', sans-serif;
+$mainFont: 'Conv_Montserrat-Regular', sans-serif;
 
-$desktopWidth: 1280px;
-$smDesktopWidth: 980px;
-$tableWidth: 768px;
-$phoneWidth: 480px;
-$smPhoneWidth: 320px;
+$darkShadeBase: #1F2041;
 
-// Main color
-$default-color           : #ffffff;
-$primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
-$purple-color            : #8854d0;
+$darkShade100: $darkShadeBase;
+$darkShade75: rgba($darkShadeBase, 0.75);
+$darkShade50: rgba($darkShadeBase, 0.5);
+$darkShade25: rgba($darkShadeBase, 0.25);
+$darkShade5: rgba($darkShadeBase, 0.05);
 
-// Neutral Color
-$neutral-primary         : #303133;
-$neutral-regular         : #606266;
-$neutral-secondary       : #909399;
-$neutral-placeholder     : #C0C4CC;
+$buttonColor: #BC9CFF;
 
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;
+$activeColor: #6FCF97;
