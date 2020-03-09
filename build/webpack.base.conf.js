@@ -129,8 +129,8 @@ module.exports = {
 
         ...pugPages.map(page => new HtmlWebpackPlugin({
             template: `${page}`,           //на входе паг
-            // filename: `${page.replace(/\.pug/,'.html').replace(/\/src\//,'/dist/')}`
-            filename: `./${page.replace(/\.pug/,'.html')}`              //на выходе хтмл
+            filename: `${page.replace(/\.pug/,'.html').replace(/\/src/,`${PATHS.dist}`)}`
+            // filename: `./${page.replace(/\.pug/,'.html')}`              //на выходе хтмл
         }))
     ]
 }

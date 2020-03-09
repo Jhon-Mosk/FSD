@@ -1,100 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="/dist/assets/css/app.css"> -->
-    <% for (var css in htmlWebpackPlugin.files.css) { %>
-    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">          <!-- вытягивает все css в [] можно указать номер элемента массива, нужен если в base.conf inject: false -->
-    <% } %>
-    <title>Colors & Type</title>
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="b-logo">
-            <img src="/assets/img/group.svg" alt="logo">
-        </div>
-        <div class="row b-colorsAndTypeWrap">
-            <div class="col">
-                <div class="b-colorItem">
-                    <div class="b-colorItem__block"></div>
-                    <div class="b-colorItem__description">
-                        <div class="b-colorItem__title">Dark Shade 100%</div>
-                        <div class="b-colorItem__hex">#1F2041</div>
-                    </div>
-                </div>
-                <div class="b-colorItem">
-                    <div class="b-colorItem__block"></div>
-                    <div class="b-colorItem__description">
-                        <div class="b-colorItem__title">Dark Shade 75%</div>
-                        <div class="b-colorItem__hex">#1F2041</div>
-                    </div>
-                </div>
-                <div class="b-colorItem">
-                    <div class="b-colorItem__block"></div>
-                    <div class="b-colorItem__description">
-                        <div class="b-colorItem__title">Dark Shade 50%</div>
-                        <div class="b-colorItem__hex">#1F2041</div>
-                    </div>
-                </div>
-                <div class="b-colorItem">
-                    <div class="b-colorItem__block"></div>
-                    <div class="b-colorItem__description">
-                        <div class="b-colorItem__title">Dark Shade 25%</div>
-                        <div class="b-colorItem__hex">#1F2041</div>
-                    </div>
-                </div>
-                <div class="b-colorItem">
-                    <div class="b-colorItem__block"></div>
-                    <div class="b-colorItem__description">
-                        <div class="b-colorItem__title">Dark Shade 5%</div>
-                        <div class="b-colorItem__hex">#1F2041</div>
-                    </div>
-                </div>
-                <div class="b-colorItem">
-                    <div class="b-colorItem__block"></div>
-                    <div class="b-colorItem__description">
-                        <div class="b-colorItem__title">Purple</div>
-                        <div class="b-colorItem__hex">#BC9CFF</div>
-                    </div>
-                </div>
-                <div class="b-colorItem">
-                    <div class="b-colorItem__block"></div>
-                    <div class="b-colorItem__description">
-                        <div class="b-colorItem__title">Green</div>
-                        <div class="b-colorItem__hex">#6FCF97</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="b-typeItem">
-                    <div class="b-typeItem__name">H1</div>
-                    <div class="b-typeItem__description">This one is the sub-section or
-                        widget title</div>
-                </div>
-                <div class="b-typeItem">
-                    <div class="b-typeItem__name">H2</div>
-                    <div class="b-typeItem__description">Next one is the item title inside
-                        widgets</div>
-                </div>
-                <div class="b-typeItem">
-                    <div class="b-typeItem__name">H3</div>
-                    <div class="b-typeItem__description">This is a label or CTA text</div>
-                </div>
-                <div class="b-typeItem">
-                    <div class="b-typeItem__name">Body</div>
-                    <div class="b-typeItem__description">This is the body text which is used for most
-                        of the design, like paragraphs, lists, etc.</div>
-                </div>
-            </div>
-        </div>
+extends ../../../components/layout/UIKit
 
-    </div>
-    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>                       <!-- вытягивает все js -->
-    <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-    <% } %>
-    <!-- <script src="/dist/assets/js/app.js"></script> -->
-</body>
-</html>
+block variables
+    - var pageTitle = 'Colors & Type'
+
+block content
+    //- <div class="container-fluid">
+    //-     <div class="b-logo">
+    //-         <img src="/assets/img/group.svg" alt="logo">
+    //-     </div>
+    //-     <div class="row b-colorsAndTypeWrap">
+    //-         <div class="col">
+    //-             <div class="b-colorItem">
+    //-                 <div class="b-colorItem__block"></div>
+    //-                 <div class="b-colorItem__description">
+    //-                     <div class="b-colorItem__title">Dark Shade 100%</div>
+    //-                     <div class="b-colorItem__hex">#1F2041</div>
+    //-                 </div>
+    //-             </div>
+    //-             <div class="b-colorItem">
+    //-                 <div class="b-colorItem__block"></div>
+    //-                 <div class="b-colorItem__description">
+    //-                     <div class="b-colorItem__title">Dark Shade 75%</div>
+    //-                     <div class="b-colorItem__hex">#1F2041</div>
+    //-                 </div>
+    //-             </div>
+    //-             <div class="b-colorItem">
+    //-                 <div class="b-colorItem__block"></div>
+    //-                 <div class="b-colorItem__description">
+    //-                     <div class="b-colorItem__title">Dark Shade 50%</div>
+    //-                     <div class="b-colorItem__hex">#1F2041</div>
+    //-                 </div>
+    //-             </div>
+    //-             <div class="b-colorItem">
+    //-                 <div class="b-colorItem__block"></div>
+    //-                 <div class="b-colorItem__description">
+    //-                     <div class="b-colorItem__title">Dark Shade 25%</div>
+    //-                     <div class="b-colorItem__hex">#1F2041</div>
+    //-                 </div>
+    //-             </div>
+    //-             <div class="b-colorItem">
+    //-                 <div class="b-colorItem__block"></div>
+    //-                 <div class="b-colorItem__description">
+    //-                     <div class="b-colorItem__title">Dark Shade 5%</div>
+    //-                     <div class="b-colorItem__hex">#1F2041</div>
+    //-                 </div>
+    //-             </div>
+    //-             <div class="b-colorItem">
+    //-                 <div class="b-colorItem__block"></div>
+    //-                 <div class="b-colorItem__description">
+    //-                     <div class="b-colorItem__title">Purple</div>
+    //-                     <div class="b-colorItem__hex">#BC9CFF</div>
+    //-                 </div>
+    //-             </div>
+    //-             <div class="b-colorItem">
+    //-                 <div class="b-colorItem__block"></div>
+    //-                 <div class="b-colorItem__description">
+    //-                     <div class="b-colorItem__title">Green</div>
+    //-                     <div class="b-colorItem__hex">#6FCF97</div>
+    //-                 </div>
+    //-             </div>
+    //-         </div>
+    //-         <div class="col">
+    //-             <div class="b-typeItem">
+    //-                 <div class="b-typeItem__name">H1</div>
+    //-                 <div class="b-typeItem__description">This one is the sub-section or
+    //-                     widget title</div>
+    //-             </div>
+    //-             <div class="b-typeItem">
+    //-                 <div class="b-typeItem__name">H2</div>
+    //-                 <div class="b-typeItem__description">Next one is the item title inside
+    //-                     widgets</div>
+    //-             </div>
+    //-             <div class="b-typeItem">
+    //-                 <div class="b-typeItem__name">H3</div>
+    //-                 <div class="b-typeItem__description">This is a label or CTA text</div>
+    //-             </div>
+    //-             <div class="b-typeItem">
+    //-                 <div class="b-typeItem__name">Body</div>
+    //-                 <div class="b-typeItem__description">This is the body text which is used for most
+    //-                     of the design, like paragraphs, lists, etc.</div>
+    //-             </div>
+    //-         </div>
+    //-     </div>
+
+    //- </div>
+
+block scripts
+    //- <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    //- <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    //- <% } %>
+        // вытягивает все js
+    //- <script src="/dist/assets/js/app.js"></script>

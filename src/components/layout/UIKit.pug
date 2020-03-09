@@ -1,0 +1,16 @@
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    //- <% for (var css in htmlWebpackPlugin.files.css) { %>
+    //- <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">          <!-- вытягивает все css в [] можно указать номер элемента массива, нужен если в base.conf inject: false -->
+    //- <% } %>
+    title= pageTitle    
+  body
+    //- include ../modules/header
+    block content
+    block scripts
