@@ -13,7 +13,7 @@ const PATHS = {
 
 // const PAGES_DIR = `${PATHS.src}/pages/`              //откуда берутся страницы в паге
 // const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
-// var results = [];
+
 function fromDir(startPath,filter){
     
     var results = [];
@@ -38,9 +38,7 @@ function fromDir(startPath,filter){
     return results;
 };
 
-// fromDir(`${PATHS.src}`,'.pug');
-
-let pugPages = fromDir(`${PATHS.src}`,'.pug');
+let pugPages = fromDir(`${PATHS.src}/pages`,'.pug');
 
 module.exports = {
 
@@ -129,8 +127,7 @@ module.exports = {
 
         ...pugPages.map(page => new HtmlWebpackPlugin({
             template: `${page}`,           //на входе паг
-            filename: `${page.replace(/\.pug/,'.html').replace(/\/src/,`${PATHS.dist}`)}`
-            // filename: `./${page.replace(/\.pug/,'.html')}`              //на выходе хтмл
+            filename: `${page.replace(/\.pug/,'.html').replace(/\\src\\/,'/\\dist\\/')}`  //на выходе хтмл           
         }))
     ]
 }
