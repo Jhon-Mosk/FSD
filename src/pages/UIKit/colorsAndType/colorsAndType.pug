@@ -4,86 +4,66 @@ block variables
     - var pageTitle = 'Colors & Type'
 
 block content
-    //- <div class="container-fluid">
-    //-     <div class="b-logo">
-    //-         <img src="/assets/img/group.svg" alt="logo">
-    //-     </div>
-    //-     <div class="row b-colorsAndTypeWrap">
-    //-         <div class="col">
-    //-             <div class="b-colorItem">
-    //-                 <div class="b-colorItem__block"></div>
-    //-                 <div class="b-colorItem__description">
-    //-                     <div class="b-colorItem__title">Dark Shade 100%</div>
-    //-                     <div class="b-colorItem__hex">#1F2041</div>
-    //-                 </div>
-    //-             </div>
-    //-             <div class="b-colorItem">
-    //-                 <div class="b-colorItem__block"></div>
-    //-                 <div class="b-colorItem__description">
-    //-                     <div class="b-colorItem__title">Dark Shade 75%</div>
-    //-                     <div class="b-colorItem__hex">#1F2041</div>
-    //-                 </div>
-    //-             </div>
-    //-             <div class="b-colorItem">
-    //-                 <div class="b-colorItem__block"></div>
-    //-                 <div class="b-colorItem__description">
-    //-                     <div class="b-colorItem__title">Dark Shade 50%</div>
-    //-                     <div class="b-colorItem__hex">#1F2041</div>
-    //-                 </div>
-    //-             </div>
-    //-             <div class="b-colorItem">
-    //-                 <div class="b-colorItem__block"></div>
-    //-                 <div class="b-colorItem__description">
-    //-                     <div class="b-colorItem__title">Dark Shade 25%</div>
-    //-                     <div class="b-colorItem__hex">#1F2041</div>
-    //-                 </div>
-    //-             </div>
-    //-             <div class="b-colorItem">
-    //-                 <div class="b-colorItem__block"></div>
-    //-                 <div class="b-colorItem__description">
-    //-                     <div class="b-colorItem__title">Dark Shade 5%</div>
-    //-                     <div class="b-colorItem__hex">#1F2041</div>
-    //-                 </div>
-    //-             </div>
-    //-             <div class="b-colorItem">
-    //-                 <div class="b-colorItem__block"></div>
-    //-                 <div class="b-colorItem__description">
-    //-                     <div class="b-colorItem__title">Purple</div>
-    //-                     <div class="b-colorItem__hex">#BC9CFF</div>
-    //-                 </div>
-    //-             </div>
-    //-             <div class="b-colorItem">
-    //-                 <div class="b-colorItem__block"></div>
-    //-                 <div class="b-colorItem__description">
-    //-                     <div class="b-colorItem__title">Green</div>
-    //-                     <div class="b-colorItem__hex">#6FCF97</div>
-    //-                 </div>
-    //-             </div>
-    //-         </div>
-    //-         <div class="col">
-    //-             <div class="b-typeItem">
-    //-                 <div class="b-typeItem__name">H1</div>
-    //-                 <div class="b-typeItem__description">This one is the sub-section or
-    //-                     widget title</div>
-    //-             </div>
-    //-             <div class="b-typeItem">
-    //-                 <div class="b-typeItem__name">H2</div>
-    //-                 <div class="b-typeItem__description">Next one is the item title inside
-    //-                     widgets</div>
-    //-             </div>
-    //-             <div class="b-typeItem">
-    //-                 <div class="b-typeItem__name">H3</div>
-    //-                 <div class="b-typeItem__description">This is a label or CTA text</div>
-    //-             </div>
-    //-             <div class="b-typeItem">
-    //-                 <div class="b-typeItem__name">Body</div>
-    //-                 <div class="b-typeItem__description">This is the body text which is used for most
-    //-                     of the design, like paragraphs, lists, etc.</div>
-    //-             </div>
-    //-         </div>
-    //-     </div>
+    .container-fluid
+    .b-logo
+        img(src='/assets/img/group.svg', alt='logo')         
+      .row.b-colorsAndTypeWrap
+        .col
+          .b-colorItem
+            .b-colorItem__block                                
+            .b-colorItem__description
+              .b-colorItem__title Dark Shade 100%                                       
+              .b-colorItem__hex #1F2041                         
+          .b-colorItem
+            .b-colorItem__block                               
+            .b-colorItem__description
+              .b-colorItem__title Dark Shade 75%                                  
+              .b-colorItem__hex #1F2041                           
+          .b-colorItem
+            .b-colorItem__block                                 
+            .b-colorItem__description
+              .b-colorItem__title Dark Shade 50%                                       
+              .b-colorItem__hex #1F2041                           
+          .b-colorItem
+            .b-colorItem__block                                 
+            .b-colorItem__description
+              .b-colorItem__title Dark Shade 25%                                       
+              .b-colorItem__hex #1F2041                          
+          .b-colorItem
+            .b-colorItem__block                                 
+            .b-colorItem__description
+              .b-colorItem__title Dark Shade 5%                                       
+              .b-colorItem__hex #1F204                          
+          .b-colorItem
+            .b-colorItem__block                                 
+            .b-colorItem__description
+              .b-colorItem__title Purple                                       
+              .b-colorItem__hex #BC9CFF                           
+          .b-colorItem
+            .b-colorItem__block                                 
+            .b-colorItem__description
+              .b-colorItem__title Green                                      
+              .b-colorItem__hex #6FCF97                    
+        .col
+          .b-typeItem
+            .b-typeItem__name H1                                 
+            .b-typeItem__description
+              | This one is the sub-section or
+              | widget title                           
+          .b-typeItem
+            .b-typeItem__name H2                                 
+            .b-typeItem__description
+              | Next one is the item title inside
+              | widgets                          
+          .b-typeItem
+            .b-typeItem__name H3                                 
+            .b-typeItem__description This is a label or CTA text                           
+          .b-typeItem
+            .b-typeItem__name Body                                 
+            .b-typeItem__description
+              | This is the body text which is used for most
+              | of the design, like paragraphs, lists, etc.
 
-    //- </div>
 
 block scripts
     //- <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
