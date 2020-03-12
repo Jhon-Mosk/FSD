@@ -4,65 +4,64 @@ block variables
     - var pageTitle = 'Colors & Type'
 
 block content
-    .container-fluid
-    .b-logo
-        img(src='/assets/img/group.svg', alt='logo')         
-      .row.b-colorsAndTypeWrap
-        .col
-          .b-colorItem
-            .b-colorItem__block                                
-            .b-colorItem__description
-              .b-colorItem__title Dark Shade 100%                                       
-              .b-colorItem__hex #1F2041                         
-          .b-colorItem
-            .b-colorItem__block                               
-            .b-colorItem__description
-              .b-colorItem__title Dark Shade 75%                                  
-              .b-colorItem__hex #1F2041                           
-          .b-colorItem
-            .b-colorItem__block                                 
-            .b-colorItem__description
-              .b-colorItem__title Dark Shade 50%                                       
-              .b-colorItem__hex #1F2041                           
-          .b-colorItem
-            .b-colorItem__block                                 
-            .b-colorItem__description
-              .b-colorItem__title Dark Shade 25%                                       
-              .b-colorItem__hex #1F2041                          
-          .b-colorItem
-            .b-colorItem__block                                 
-            .b-colorItem__description
-              .b-colorItem__title Dark Shade 5%                                       
-              .b-colorItem__hex #1F204                          
-          .b-colorItem
-            .b-colorItem__block                                 
-            .b-colorItem__description
-              .b-colorItem__title Purple                                       
-              .b-colorItem__hex #BC9CFF                           
-          .b-colorItem
-            .b-colorItem__block                                 
-            .b-colorItem__description
-              .b-colorItem__title Green                                      
-              .b-colorItem__hex #6FCF97                    
-        .col
-          .b-typeItem
-            .b-typeItem__name H1                                 
-            .b-typeItem__description
-              | This one is the sub-section or
-              | widget title                           
-          .b-typeItem
-            .b-typeItem__name H2                                 
-            .b-typeItem__description
-              | Next one is the item title inside
-              | widgets                          
-          .b-typeItem
-            .b-typeItem__name H3                                 
-            .b-typeItem__description This is a label or CTA text                           
-          .b-typeItem
-            .b-typeItem__name Body                                 
-            .b-typeItem__description
-              | This is the body text which is used for most
-              | of the design, like paragraphs, lists, etc.
+  .logo
+    img(src='/assets/img/group.svg', alt='logo')         
+  .container-fluid
+    section.colors-wrap
+      .colorItem
+        .colorItem__block                                
+        .colorItem__description
+          .colorItem__title Dark Shade 100%                                       
+          .colorItem__hex #1F2041                         
+      .colorItem
+        .colorItem__block                               
+        .colorItem__description
+          .colorItem__title Dark Shade 75%                                  
+          .colorItem__hex #1F2041                           
+      .colorItem
+        .colorItem__block                                 
+        .colorItem__description
+          .colorItem__title Dark Shade 50%                                       
+          .colorItem__hex #1F2041                           
+      .colorItem
+        .colorItem__block                                 
+        .colorItem__description
+          .colorItem__title Dark Shade 25%                                       
+          .colorItem__hex #1F2041                          
+      .colorItem
+        .colorItem__block                                 
+        .colorItem__description
+          .colorItem__title Dark Shade 5%                                       
+          .colorItem__hex #1F204                          
+      .colorItem
+        .colorItem__block                                 
+        .colorItem__description
+          .colorItem__title Purple                                       
+          .colorItem__hex #BC9CFF                           
+      .colorItem
+        .colorItem__block                                 
+        .colorItem__description
+          .colorItem__title Green                                      
+          .colorItem__hex #6FCF97                    
+    section.type-wrap
+      .typeItem
+        .typeItem__name H1                                 
+        .typeItem__description
+          | This one is the sub-section or
+          | widget title                           
+      .typeItem
+        .typeItem__name H2                                 
+        .typeItem__description
+          | Next one is the item title inside
+          | widgets                          
+      .typeItem
+        .typeItem__name H3                                 
+        .typeItem__description This is a label or CTA text                           
+      .typeItem
+        .typeItem__name Body                                 
+        .typeItem__description
+          | This is the body text which is used for most
+          | of the design, like paragraphs, lists, etc.
 
 
 block scripts
