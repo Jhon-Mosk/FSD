@@ -6,10 +6,13 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="description" content="Colors & Type")
+    meta(name="Keywords" content="UIKit, Colors, Type")
+    //- TODO description & Keywords var
     //- <% for (var css in htmlWebpackPlugin.files.css) { %>
     //- <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">          <!-- вытягивает все css в [] можно указать номер элемента массива, нужен если в base.conf inject: false -->
     //- <% } %>
-    title= pageTitle    
+    title= pageTitle   
   body
     //- include ../modules/header
     block content
