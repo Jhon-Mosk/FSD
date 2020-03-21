@@ -1,0 +1,10 @@
+.color-item {
+    margin-bottom: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    &__block {
+        background: $darkShade100;
+    }
+}   
