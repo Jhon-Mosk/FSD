@@ -2,47 +2,52 @@ extends ../../../components/layout/UIKit
 
 block variables
     - var pageTitle = 'Colors & Type'
+    - var description = 'Colors & Type'
+    - var keywords = 'UIKit, Colors, Type'
+    - var darkShade = afdasfa
+    - var afdasfa = afdasfa
 
 block content
   .logo
     img(src='/assets/img/group.svg', alt='logo')         
-  .container-fluid
+  .container
     section.colors-wrap
-      .colorItem
-        .colorItem__block                                
-        .colorItem__description
-          .colorItem__title Dark Shade 100%                                       
-          .colorItem__hex #1F2041                         
-      .colorItem
-        .colorItem__block                               
-        .colorItem__description
-          .colorItem__title Dark Shade 75%                                  
-          .colorItem__hex #1F2041                           
-      .colorItem
-        .colorItem__block                                 
-        .colorItem__description
-          .colorItem__title Dark Shade 50%                                       
-          .colorItem__hex #1F2041                           
-      .colorItem
-        .colorItem__block                                 
-        .colorItem__description
-          .colorItem__title Dark Shade 25%                                       
-          .colorItem__hex #1F2041                          
-      .colorItem
-        .colorItem__block                                 
-        .colorItem__description
-          .colorItem__title Dark Shade 5%                                       
-          .colorItem__hex #1F204                          
-      .colorItem
-        .colorItem__block                                 
-        .colorItem__description
-          .colorItem__title Purple                                       
-          .colorItem__hex #BC9CFF                           
-      .colorItem
-        .colorItem__block                                 
-        .colorItem__description
-          .colorItem__title Green                                      
-          .colorItem__hex #6FCF97                    
+      include ../../../components/color-item/color-item
+      //- .color-item
+      //-   .color-item__block                                
+      //-   .color-item__description
+      //-     .color-item__title Dark Shade 100%                                       
+      //-     .color-item__hex #1F2041                         
+      .color-item
+        .color-item__block                               
+        .color-item__description
+          .color-item__title Dark Shade 75%                                  
+          .color-item__hex #1F2041                           
+      .color-item
+        .color-item__block                                 
+        .color-item__description
+          .color-item__title Dark Shade 50%                                       
+          .color-item__hex #1F2041                           
+      .color-item
+        .color-item__block                                 
+        .color-item__description
+          .color-item__title Dark Shade 25%                                       
+          .color-item__hex #1F2041                          
+      .color-item
+        .color-item__block                                 
+        .color-item__description
+          .color-item__title Dark Shade 5%                                       
+          .color-item__hex #1F204                          
+      .color-item
+        .color-item__block                                 
+        .color-item__description
+          .color-item__title Purple                                       
+          .color-item__hex #BC9CFF                           
+      .color-item
+        .color-item__block                                 
+        .color-item__description
+          .color-item__title Green                                      
+          .color-item__hex #6FCF97                    
     section.type-wrap
       .typeItem
         .typeItem__name H1                                 
