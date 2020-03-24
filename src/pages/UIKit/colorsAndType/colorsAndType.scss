@@ -11,59 +11,6 @@
     
 }
 
-.b-colorItem {
-    
-
-    &:nth-child(1) &__block{
-            background: $darkShade100;
-    }
-
-    &:nth-child(2) &__block {        
-            background: $darkShade75;
-    }
-
-    &:nth-child(3) &__block {
-        background: $darkShade50;
-    }
-
-    &:nth-child(4) &__block {
-        background: $darkShade25;
-    }
-
-    &:nth-child(5) &__block {
-        background: $darkShade5;
-    }
-
-    &:nth-child(6) &__block {
-        background: $buttonColor;
-    }
-
-    &:nth-child(7) &__block {
-        background: $activeColor;
-    }
-
-    &__block {
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;   
-    }
-
-    &__description {
-        padding-left: 40px;
-        font-size: 19px;
-        line-height: 29px;        
-        color: $darkShade100;   
-    }
-
-    &__title {
-        font-family: $titleBoldFont;       
-    }
-
-    &__hex {
-        font-family: $titleFont;     
-    }
-}
-
 .b-typeItem {
     margin-bottom: 50px;
     display: flex;
