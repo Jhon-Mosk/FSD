@@ -4,7 +4,63 @@
     display: flex;
     align-items: center;
 
+    // &__block {
+    //     background: $darkShade100;
+    // }
+
     &__block {
-        background: $darkShade100;
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+
+        @for $i from 1 through 13 {
+            &:nth-child(#{$i}){
+                background: rgba($darkShadeBase, $opacity);              
+                $opacity: $opacity - $opacityStep;              
+            }
+          }
+        // &:nth-child(1) {
+        //     background: $darkShade100;
+        // }
+    
+        // &:nth-child(3) {
+        //     background: $darkShade75;
+        // }
+    
+        // &:nth-child(5) {
+        //     background: $darkShade50;
+        // }
+    
+        // &:nth-child(7) {
+        //     background: $darkShade25;
+        // }
+    
+        // &:nth-child(9) {
+        //     background: $darkShade5;
+        // }
+    
+        // &:nth-child(11) {
+        //     background: $buttonColor;
+        // }
+    
+        // &:nth-child(13) {
+        //     background: $activeColor;
+        // }
     }
-}   
+
+    
+    &__description {
+        padding-left: 40px;
+        font-size: 19px;
+        line-height: 29px;        
+        color: $darkShade100;   
+    }
+
+    &__title {
+        font-family: $titleBoldFont;       
+    }
+
+    &__hex {
+        font-family: $titleFont;     
+    }
+}
