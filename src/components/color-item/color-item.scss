@@ -3,24 +3,17 @@
     height: 70px;
     display: flex;
     align-items: center;    
-
-    &__block {
-        width: 70px;
-        height: 70px;
-        border-radius: 6px;
-       
-        @for $i from 1 through 14 {  // 14 равно количиству color-item * 2, при изменении количества требуется добавить цвета в $colors находится в vars.scss          
-            &:nth-child(#{$i}){
-                @if $i / 2 == 1 {
-                    background: none;                      
-                }
-                @else {                        
-                    background: nth($colors, ($i + 1) / 2);
-                }                 
-            }
-        }        
+    
+    @for $i from 1 through 7 {          
+        &:nth-child(#{$i}){
+            .color-item__block {
+                background: nth($colors, $i);
+                width: 70px;
+                height: 70px;
+                border-radius: 6px;
+            } 
+        }
     }
-
     
     &__description {
         padding-left: 40px;
