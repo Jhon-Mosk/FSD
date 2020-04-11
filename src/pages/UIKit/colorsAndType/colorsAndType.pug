@@ -4,76 +4,46 @@ block variables
     - var pageTitle = 'Colors & Type'
     - var description = 'Colors & Type'
     - var keywords = 'UIKit, Colors, Type'
-    - var darkShade = afdasfa
-    - var afdasfa = afdasfa
 
 block content
-  .logo
-    img(src='/assets/img/group.svg', alt='logo')         
-  .container
-    section.colors-wrap
-      include ../../../components/color-item/color-item
-      +color-item('Dark Shade 100%', '#1F2041')
-      +color-item('Dark Shade 75%', '#1F2041')
-      +color-item('Dark Shade 50%', '#1F2041')
-      +color-item('Dark Shade 25%', '#1F2041')
-      +color-item('Dark Shade 5%', '#1F2041')
-      +color-item('Purple', '#BC9CFF')
-      +color-item('Green', '#6FCF97')
-      //- .color-item
-      //-   .color-item__block                                
-      //-   .color-item__description
-      //-     .color-item__title Dark Shade 100%                                       
-      //-     .color-item__hex #1F2041                         
-      //- .color-item
-      //-   .color-item__block                               
-      //-   .color-item__description
-      //-     .color-item__title Dark Shade 75%                                  
-      //-     .color-item__hex #1F2041                           
-      //- .color-item
-      //-   .color-item__block                                 
-      //-   .color-item__description
-      //-     .color-item__title Dark Shade 50%                                       
-      //-     .color-item__hex #1F2041                           
-      //- .color-item
-      //-   .color-item__block                                 
-      //-   .color-item__description
-      //-     .color-item__title Dark Shade 25%                                       
-      //-     .color-item__hex #1F2041                          
-      //- .color-item
-      //-   .color-item__block                                 
-      //-   .color-item__description
-      //-     .color-item__title Dark Shade 5%                                       
-      //-     .color-item__hex #1F204                          
-      //- .color-item
-      //-   .color-item__block                                 
-      //-   .color-item__description
-      //-     .color-item__title Purple                                       
-      //-     .color-item__hex #BC9CFF                           
-      //- .color-item
-      //-   .color-item__block                                 
-      //-   .color-item__description
-      //-     .color-item__title Green                                      
-      //-     .color-item__hex #6FCF97                    
-    section.type-wrap
-      .typeItem
-        .typeItem__name H1                                 
-        .typeItem__description
-          | This one is the sub-section or
-          | widget title                           
-      .typeItem
-        .typeItem__name H2                                 
-        .typeItem__description
-          | Next one is the item title inside
-          | widgets                          
-      .typeItem
-        .typeItem__name H3                                 
-        .typeItem__description This is a label or CTA text                           
-      .typeItem
-        .typeItem__name Body                                 
-        .typeItem__description
-          | This is the body text which is used for most
-          | of the design, like paragraphs, lists, etc.
+  .page
+    .logo
+      img(src='/assets/img/group.svg', alt='logo')         
+    .container
+      section.colors-wrap
+        include ../../../components/color-item/color-item
+        +color-item('Dark Shade 100%', '#1F2041')
+        +color-item('Dark Shade 75%', '#1F2041')
+        +color-item('Dark Shade 50%', '#1F2041')
+        +color-item('Dark Shade 25%', '#1F2041')
+        +color-item('Dark Shade 5%', '#1F2041')
+        +color-item('Purple', '#BC9CFF')
+        +color-item('Green', '#6FCF97')
+                 
+      section.type-wrap
+        include ../../../components/type-item/type-item
+        +type-item('H1','This one is the sub-section or widget title')
+        +type-item('H2','Next one is the item title inside widgets')
+        +type-item('H3','This is a label or CTA text')
+        +type-item('Body','This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+        //- .typeItem
+        //-   .typeItem__name H1                                 
+        //-   .typeItem__description
+        //-     | This one is the sub-section or
+        //-     | widget title                           
+        //- .typeItem
+        //-   .typeItem__name H2                                 
+        //-   .typeItem__description
+        //-     | Next one is the item title inside
+        //-     | widgets                          
+        //- .typeItem
+        //-   .typeItem__name H3                                 
+        //-   .typeItem__description This is a label or CTA text                           
+        //- .typeItem
+        //-   .typeItem__name Body                                 
+        //-   .typeItem__description
+        //-     | This is the body text which is used for most
+        //-     | of the design, like paragraphs, lists, etc.
 
 
 block scripts
