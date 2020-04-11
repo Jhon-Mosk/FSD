@@ -1,0 +1,54 @@
+.type-item {
+    margin-bottom: 50px;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 55px 380px;
+
+    &:nth-child(1) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    &:nth-child(2) {
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    &:nth-child(3) {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &:nth-child(4) {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__name {
+        font-family: $mainFont;
+        color: $darkShade25;
+        // width: 55px;
+        text-align: right;
+    }
+
+    &:nth-child(1) &__description {
+        font-family: $titleBoldFont;        
+    }
+
+    &:nth-child(2) &__description {
+        font-family: $titleBoldFont;        
+    }
+
+    &:nth-child(3) &__description {
+        font-family: $mainBoldFont;
+        text-transform: uppercase;
+    }
+
+    &:nth-child(4) &__description {
+        font-family: $mainFont;
+    }
+
+    &__description {
+        margin-left: 30px;
+    }
+}
