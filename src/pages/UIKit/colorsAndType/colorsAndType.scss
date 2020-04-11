@@ -1,64 +1,28 @@
 @import "../../../assets/scss/reset.scss";
 @import "../../../assets/scss/vars";
 @import "../../../components/color-item/color-item";
+@import "../../../components/type-item/type-item";
+
+.page {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 .container {
     max-width: 1160px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 11px;
+    padding-top: 6px;
+    padding-right: 69px;
 }
 
 .colors-wrap {
-    
+   width: 271px; 
 }
 
-.b-typeItem {
-    margin-bottom: 50px;
-    display: flex;
-
-    &:nth-child(1) {
-        font-size: 24px;
-        line-height: 30px;
-    }
-
-    &:nth-child(2) {
-        font-size: 19px;
-        line-height: 24px;
-    }
-
-    &:nth-child(3) {
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-    &:nth-child(4) {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    &__name {
-        font-family: $mainFont;
-        color: $darkShade25;
-        width: 37px;
-        text-align: right;
-    }
-
-    &:nth-child(1) &__description {
-        font-family: $titleBoldFont;        
-    }
-
-    &:nth-child(2) &__description {
-        font-family: $titleBoldFont;        
-    }
-
-    &:nth-child(3) &__description {
-        font-family: $mainBoldFont;        
-    }
-
-    &:nth-child(4) &__description {
-        font-family: $mainFont;
-    }
-
-    &__description {
-        margin-left: 30px;
-    }
+.type-wrap {
+    width: 403px;
 }
