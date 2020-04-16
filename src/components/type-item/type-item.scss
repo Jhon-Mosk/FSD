@@ -1,33 +1,29 @@
+@mixin type-item-options($font-size, $line-height, $column: 380px) {        
+    font-size: $font-size;
+    line-height: $line-height;
+    grid-template-columns: 55px $column;    
+}
+
 .type-item {
     margin-bottom: 50px;
-    // display: flex;
-    display: grid;
-    grid-template-columns: 55px 380px;
+    display: grid;    
 
     &:nth-child(1) {
-        font-size: 24px;
-        line-height: 30px;
+        @include type-item-options(24px, 30px)
     }
-
     &:nth-child(2) {
-        font-size: 19px;
-        line-height: 24px;
+        @include type-item-options(19px, 24px)
     }
-
     &:nth-child(3) {
-        font-size: 12px;
-        line-height: 15px;
+        @include type-item-options(12px, 15px)
     }
-
     &:nth-child(4) {
-        font-size: 14px;
-        line-height: 24px;
+        @include type-item-options(14px, 24px, 345px)
     }
 
     &__name {
         font-family: $mainFont;
         color: $darkShade25;
-        // width: 55px;
         text-align: right;
     }
 
