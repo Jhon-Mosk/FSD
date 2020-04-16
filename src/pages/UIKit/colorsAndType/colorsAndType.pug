@@ -8,7 +8,9 @@ block variables
 block content
   .page
     .logo
-      img(src='/assets/img/group.svg', alt='logo')         
+      include ../../../components/logo/logo
+      +logo('#1F2041', 0.25)
+      //- img(src='/assets/img/group.svg', alt='logo')         
     .container
       section.colors-wrap
         include ../../../components/color-item/color-item
@@ -26,26 +28,7 @@ block content
         +type-item('H2','Next one is the item title inside widgets')
         +type-item('H3','This is a label or CTA text')
         +type-item('Body','This is the body text which is used for most of the design, like paragraphs, lists, etc.')
-        //- .typeItem
-        //-   .typeItem__name H1                                 
-        //-   .typeItem__description
-        //-     | This one is the sub-section or
-        //-     | widget title                           
-        //- .typeItem
-        //-   .typeItem__name H2                                 
-        //-   .typeItem__description
-        //-     | Next one is the item title inside
-        //-     | widgets                          
-        //- .typeItem
-        //-   .typeItem__name H3                                 
-        //-   .typeItem__description This is a label or CTA text                           
-        //- .typeItem
-        //-   .typeItem__name Body                                 
-        //-   .typeItem__description
-        //-     | This is the body text which is used for most
-        //-     | of the design, like paragraphs, lists, etc.
-
-
+       
 block scripts
     //- <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
     //- <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
