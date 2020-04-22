@@ -2,7 +2,7 @@
 @import "../../../assets/scss/vars";
 @import "../../../components/color-item/color-item";
 @import "../../../components/type-item/type-item";
-@import "../../../components/logo/logo.scss";
+@import "../../../components/logo/logo";
 
 .page {
     max-width: 1440px;
@@ -12,18 +12,19 @@
 .container {
     max-width: 1160px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
 
-    padding-left: 11px;
-    padding-top: 6px;
-    padding-right: 69px;
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .colors-wrap {
-   width: 271px; 
+    padding: 67px 0 0 11px;
+//    width: 271px; 
 }
 
 .type-wrap {
-    width: 403px;
+    padding: 67px 0 0 108px;
+    // width: 403px;
 }
