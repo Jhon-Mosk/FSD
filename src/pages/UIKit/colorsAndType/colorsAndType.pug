@@ -7,11 +7,10 @@ block variables
 
 block content
   .page
-    .logo
+    .logo.logo_margin
       include ../../../components/logo/logo
-      +logo('#1F2041', 0.25)
-      //- img(src='/assets/img/group.svg', alt='logo')         
-    .container
+      +logo('#1F2041', '#1F2041', '#1F2041', 0.25)
+    .container.container_grid
       section.colors-wrap
         include ../../../components/color-item/color-item
         +color-item('Dark Shade 100%', '#1F2041')
