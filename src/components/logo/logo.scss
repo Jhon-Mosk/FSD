@@ -1,3 +1,5 @@
 .logo {
-    fill: red;
+    &_margin {
+        margin: 40px 0 0 30px;
+    }
 }
