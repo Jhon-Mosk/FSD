@@ -1,0 +1,51 @@
+.text-field {
+    width: 320px;
+    
+    &_margin-top-65 {
+        margin-top: 65px;
+    }
+
+    &_margin-top-18 {
+        margin-top: 18px;
+    }
+
+    &__name {
+        font-family: $mainBoldFont;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $darkShade100;
+        float: left;
+        margin-bottom: 7px;
+    }
+
+    &__status {
+        font-family: $mainFont;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $darkShade50;
+        float: right;
+    }
+
+    &__field {
+
+        &:hover, &:focus {
+            border: 1px solid $darkShade50;
+            color: $darkShade75;
+        }
+
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;    
+        color: $darkShade25;
+        border: 1px solid $darkShade25;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 320px;
+        height: 44px;
+        padding-left: 15px;
+    }
+}
