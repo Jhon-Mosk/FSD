@@ -1,0 +1,27 @@
+extends ../../../components/layout/UIKit
+
+block variables
+    - var pageTitle = 'Form Elements'
+    - var description = 'Form Elements'
+    - var keywords = 'Form, Elements'
+
+block content
+  .page
+    .logo.logo_margin-form-elements
+      include ../../../components/logo/logo
+      +logo('#1F2041', '#1F2041', '#1F2041', 0.25)
+    .container.container_grid-3-columns
+      section        
+        include ../../../components/text-field/text-field
+        +text-field('text field', 'default', 'Email', '65')
+        +text-field('text field', 'Hover / Focus', 'This is pretty awesome', '18', ':focus')
+      section
+
+      section
+
+block scripts
+    //- <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    //- <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    //- <% } %>
+        // вытягивает все js
+    //- <script src="/dist/assets/js/app.js"></script>
