@@ -1,0 +1,22 @@
+@import "reset";
+@import "vars";
+
+.page {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+
+    &_grid-2-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &_grid-3-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
