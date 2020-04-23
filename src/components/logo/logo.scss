@@ -1,5 +1,13 @@
 .logo {
-    &_margin {
+
+    &_margin{
+
+        &-colors-and-type {
         margin: 40px 0 0 30px;
+        }
+
+        &-form-elements {
+            margin: 32px 0 0 30px;  
+        }
     }
 }
