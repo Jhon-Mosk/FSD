@@ -2,6 +2,7 @@
 
 import './js/common'
 import './pages/UIKit/colorsAndType/colorsAndType.scss'
+import './pages/UIKit/formElements/formElements.scss'
 
 
 /*три способа как подключать файлы
