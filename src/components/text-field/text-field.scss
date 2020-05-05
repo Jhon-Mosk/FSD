@@ -28,24 +28,36 @@
         float: right;
     }
 
-    &__field {
-
-        &:hover, &:focus {
-            border: 1px solid $darkShade50;
-            color: $darkShade75;
-        }
-
+    &__field {                
         font-family: $mainFont;
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
         line-height: 18px;    
-        color: $darkShade25;
+        color: $darkShade75;
         border: 1px solid $darkShade25;
         box-sizing: border-box;
         border-radius: 4px;
         width: 320px;
         height: 44px;
         padding-left: 15px;
+
+        &::placeholder {
+            color: $darkShade25;
+        }
+
+        &_active {
+            border: 1px solid $darkShade50;
+            color: $darkShade75;
+
+            &::placeholder {
+                color: $darkShade75;
+            }
+        }
+
+        &:hover, &:focus {
+            border: 1px solid $darkShade50;
+            color: $darkShade75;
+        }
     }
 }
