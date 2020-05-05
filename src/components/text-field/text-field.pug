@@ -1,5 +1,5 @@
-mixin text-field(name, status, placeholder, marginTop, state)
+mixin text-field(name, status, placeholder, marginTop, state= 'normal')
     .text-field(class='text-field_margin-top-' + marginTop)
         .text-field__name= name
         .text-field__status= status
-        input.text-field__field(type='email', placeholder= placeholder pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
+        input.text-field__field(class='text-field__field_' + state)(type='email', placeholder= placeholder pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")
