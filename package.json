@@ -31,6 +31,9 @@
     "url": "https://github.com/Jhon-Mosk/FSD/issues"
   },
   "homepage": "https://github.com/Jhon-Mosk/FSD#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
@@ -42,7 +45,7 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "file-loader": "^5.0.2",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",    
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "path": "^0.12.7",
