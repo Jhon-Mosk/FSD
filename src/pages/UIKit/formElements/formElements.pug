@@ -15,11 +15,14 @@ block content
         include ../../../components/text-field/text-field
         +text-field('text field', 'default', 'Email', '65')
         +text-field('text field', 'Hover / Focus', 'This is pretty awesome', '18', 'active')
+        include ../../../components/dropdown/dropdown
+        +dropdown
       section
 
       section
 
 block scripts
+  script(src="../../../components/dropdown/item-quantity-dropdown.min.js")
     //- <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
     //- <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
     //- <% } %>
